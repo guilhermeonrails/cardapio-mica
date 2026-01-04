@@ -1,12 +1,28 @@
 :root {
-    --arg-blue: #75AADB;
+    /* Paleta Nova */
+    --color-ocre: #C69773;
+    /* Ocre/Caramelo Médio - Botões/Ação */
+    --color-marrom: #A77F5C;
+    /* Marrom Médio - Branding Principal */
+    --color-bege-amarelo: #E2CFAF;
+    /* Bege Amarelado - Background Light */
+    --color-bege-rosa: #D9C0AA;
+    /* Bege Rosado - Detalhes/Alternativo */
+    --color-verde: #749687;
+    /* Verde Musgo - WhatsApp/Destaques */
+
+    /* Mapeamento para Variáveis Antigas/Funcionais */
+    --arg-blue: var(--color-marrom);
     --arg-white: #FFFFFF;
-    --arg-yellow: #F6B40E;
-    --arg-yellow-dark: #D9A00C;
+    --arg-yellow: var(--color-ocre);
+    --arg-yellow-dark: #b08566;
+    /* Um pouco mais escuro que o ocre para hover */
+
     --text-slate: #2C3E50;
-    --bg-light: #F0F8FF;
+    /* Manter ou ajustar para marrom escuro se necessário? Por enquanto manter contraste */
+    --bg-light: var(--color-bege-amarelo);
+
     --border-radius: 0.75rem;
-    /* 12px */
     --transition: all 0.3s ease;
 }
 
@@ -125,8 +141,8 @@ h4 {
     font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    /* animate-pulse simulation */
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Melhorar leitura no marrom */
 }
 
 @media (min-width: 768px) {
@@ -180,7 +196,7 @@ h4 {
 }
 
 .btn-whatsapp {
-    background-color: var(--arg-blue);
+    background-color: var(--color-verde);
     color: var(--arg-white);
     display: inline-flex;
     align-items: center;
@@ -189,12 +205,12 @@ h4 {
     padding: 0.75rem 2rem;
     width: auto;
     height: auto;
-    border: 2px solid var(--arg-blue);
+    border: 2px solid var(--color-verde);
 }
 
 .btn-whatsapp:hover {
     background-color: transparent;
-    color: var(--arg-blue);
+    color: var(--color-verde);
 }
 
 .btn-whatsapp svg {
@@ -260,7 +276,7 @@ h4 {
 }
 
 .text-highlight {
-    color: var(--arg-blue);
+    color: var(--color-marrom);
 }
 
 /* Preparation Section */
@@ -269,8 +285,8 @@ h4 {
 }
 
 .border-blue {
-    border-top: 1px solid #bfdbfe;
-    border-bottom: 1px solid #bfdbfe;
+    border-top: 1px solid var(--color-bege-rosa);
+    border-bottom: 1px solid var(--color-bege-rosa);
 }
 
 .prep-card {
@@ -286,7 +302,7 @@ h4 {
     font-size: 1.875rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: var(--arg-blue);
+    color: var(--color-marrom);
     display: flex;
     align-items: center;
 }
@@ -305,7 +321,7 @@ h4 {
 }
 
 .step-num {
-    color: var(--arg-blue);
+    color: var(--color-ocre);
     font-weight: 700;
     margin-right: 0.75rem;
     flex-shrink: 0;
@@ -313,7 +329,7 @@ h4 {
 
 /* Footer */
 .footer {
-    background-color: var(--arg-blue);
+    background-color: var(--color-marrom);
     color: var(--arg-white);
     padding: 4rem 0;
 }
@@ -360,7 +376,7 @@ h4 {
 }
 
 .footer-link:hover {
-    color: var(--arg-yellow);
+    color: var(--color-ocre);
 }
 
 .footer-link svg {
@@ -395,7 +411,7 @@ h4 {
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--arg-blue);
+    color: var(--color-marrom);
 }
 
 @media (min-width: 768px) {
